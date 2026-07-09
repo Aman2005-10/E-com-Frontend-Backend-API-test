@@ -37,8 +37,8 @@ function App() {
   <Route element={<DashboardLayout />} >
   
   <Route path='/' element={<Dashboard />} ></Route>
-  <Route path='/cart' element={<Cart />}></Route>
-  <Route path='/my-order' element={<Orders />}></Route>
+  {/* <Route path='/cart' element={<Cart />}></Route>
+  <Route path='/my-order' element={<Orders />}></Route> */}
   <Route path='*' element={<PageNotFound />} ></Route>
   
 </Route>
