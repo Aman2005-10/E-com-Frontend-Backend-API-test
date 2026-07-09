@@ -36,7 +36,7 @@ function App() {
   <Route  element={<PrivateRoute />} >
   <Route element={<DashboardLayout />} >
   
-  <Route path='/dashboard' element={<Dashboard />} ></Route>
+  <Route path='/' element={<Dashboard />} ></Route>
   <Route path='/cart' element={<Cart />}></Route>
   <Route path='/my-order' element={<Orders />}></Route>
   <Route path='*' element={<PageNotFound />} ></Route>
