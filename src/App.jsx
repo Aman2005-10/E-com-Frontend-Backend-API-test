@@ -29,7 +29,7 @@ function App() {
 <Routes>
    <Route  element={<PublicRoute />} >
   
-  <Route path='/' element={<Home />}  />
+  <Route path='/login' element={<Home />}  />
    </Route>
 
 
@@ -39,7 +39,7 @@ function App() {
   <Route path='/' element={<Dashboard />} ></Route>
   {/* <Route path='/cart' element={<Cart />}></Route>
   <Route path='/my-order' element={<Orders />}></Route> */}
-  <Route path='*' element={<PageNotFound />} ></Route>
+  <Route path='*' element={<PageNotFound /> } ></Route>
   
 </Route>
 
