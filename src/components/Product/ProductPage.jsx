@@ -30,27 +30,27 @@ function ProductPage() {
   }, [token]);
 
 
- const handleCart = async (id) => {
-  try {
-    const res = await axios.post(
-      "https://e-com-backend-19bf.onrender.com/api/create-cart",
-      {
-        productId: id,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+//  const handleCart = async (id) => {
+//   try {
+//     const res = await axios.post(
+//       "https://e-com-backend-19bf.onrender.com/api/create-cart",
+//       {
+//         productId: id,
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
 
-    console.log(res.data.message);
-    toast.success(res.data.message)
-  } catch (error) {
-    toast.error(error.response?.data || error.message)
-    console.log(error.response?.data || error.message);
-  }
-};
+//     console.log(res.data.message);
+//     toast.success(res.data.message)
+//   } catch (error) {
+//     toast.error(error.response?.data || error.message)
+//     console.log(error.response?.data || error.message);
+//   }
+// };
   return (
     <div className="container mx-auto p-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -94,7 +94,7 @@ function ProductPage() {
                 </span>
               </div>
 
-              <button onClick={() => handleCart(product._id)} className="w-full mt-5 py-3 rounded-lg bg-black text-white font-semibold  cursor-pointer">
+              <button  className="w-full mt-5 py-3 rounded-lg bg-black text-white font-semibold  cursor-pointer">
                 Add to Cart
               </button>
 

@@ -6,7 +6,7 @@ import axios  from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Loginpage = () => {
-  const {formstate , setformState , token } = useContext(AuthContext)
+  const {formstate , setformState , token , settoken , setUser } = useContext(AuthContext)
 
   const navigate = useNavigate()
  
@@ -31,7 +31,9 @@ toast.success(res.data.message);
 
         localStorage.setItem("token" , (res.data.token))
         localStorage.setItem("user" , JSON.stringify(res.data.user))
- navigate("/dashboard");
+        settoken(res.data.token);
+        setUser(res.data.user);
+        navigate("/dashboard");
 
 
        

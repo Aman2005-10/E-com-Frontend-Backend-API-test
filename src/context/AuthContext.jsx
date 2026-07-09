@@ -14,9 +14,17 @@ const AuthProvider = ({children}) => {
      if(saveduser){
        setUser(JSON.parse(saveduser));
      }
-     settoken(savedToken)
-    
+     if(savedToken){
+       settoken(savedToken)
+     }
     } , [])
+
+    const logout = () => {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      settoken("");
+      setUser("");
+    }
 
     
   
@@ -29,7 +37,7 @@ const AuthProvider = ({children}) => {
 
     return (
 
-        <AuthContext.Provider value={{formstate , setformState  , token , user  }}>
+        <AuthContext.Provider value={{formstate , setformState  , token , settoken , user , setUser , logout}}>
 
         {children}
         </AuthContext.Provider>
