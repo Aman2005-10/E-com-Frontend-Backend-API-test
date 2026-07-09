@@ -29,14 +29,14 @@ function App() {
 <Routes>
    <Route  element={<PublicRoute />} >
   
-  <Route path='/login' element={<Home />}  />
+  <Route path='/' element={<Home />}  />
    </Route>
 
 
   <Route  element={<PrivateRoute />} >
   <Route element={<DashboardLayout />} >
   
-  <Route path='/' element={<Dashboard />} ></Route>
+  <Route path='/dashboard' element={<Dashboard />} ></Route>
   {/* <Route path='/cart' element={<Cart />}></Route>
   <Route path='/my-order' element={<Orders />}></Route> */}
   <Route path='*' element={<PageNotFound /> } ></Route>
